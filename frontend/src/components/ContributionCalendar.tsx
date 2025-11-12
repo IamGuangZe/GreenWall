@@ -618,7 +618,7 @@ function ContributionCalendar({
     const isPreviewDate = previewMode && previewDates.has(c.date);
     if (isPreviewDate) {
       if (penMode === 'auto') {
-        const current = userContributions.get(c.data) ?? 0;
+        const current = userContributions.get(c.date) ?? 0;
         displayLevel = calculateLevel(getNextContribution(current));
       } else {
         displayLevel = calculateLevel(penIntensity);
