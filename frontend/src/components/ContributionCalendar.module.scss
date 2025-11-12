@@ -147,9 +147,9 @@
 
   // 预览状态样式
   &.preview {
-    background: #216e39 !important;
-    border-color: rgba(33, 110, 57, 0.8) !important;
-    outline: 2px solid #ff6b35 !important;
+    background: #216e39;
+    border-color: rgba(33, 110, 57, 0.8);
+    outline: 2px solid #ff6b35;
     outline-offset: 1px;
     animation: pulse 1.5s infinite;
   }
