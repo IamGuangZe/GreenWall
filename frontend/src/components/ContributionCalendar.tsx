@@ -617,7 +617,12 @@ function ContributionCalendar({
     // 如果在预览模式且该日期在预览列表中，显示预览样式
     const isPreviewDate = previewMode && previewDates.has(c.date);
     if (isPreviewDate) {
-      displayLevel = 4; // 预览时显示最深绿色
+      if (penMode === 'auto') {
+        const current = userContributions.get(c.data) ?? 0;
+        displayLevel = calculateLevel(getNextContribution(current));
+      } else {
+        displayLevel = calculateLevel(penIntensity);
+      }
     }
 
     // 创建新的tip信息，反映用户设置的贡献次数
